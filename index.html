@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priyal Padheriya</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Priyal Padheriya" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Priyal Padheriya">Priyal Padheriya</h1>
+
+          <p class="title">Data and Product Enthusiast</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:priyalp2302@gmail.com" class="contact-link">priyalp2302@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+15203284210" class="contact-link">+1 (520) 328-4210</a>
+            </div>
+
+          </li>
+
+          <!--
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">February 23, 2000</time>
+            </div>
+
+          </li>
+        -->
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Austin, TX, USA</address>
+            </div>
+
+          </li>
+
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/priyalpadheriya2302/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://medium.com/@priyalpadheriya" class="social-link">
+              <ion-icon name="logo-medium"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/priyalp2302" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://drive.google.com/file/d/1lT04362tk-C9w28FO41c5FEvF2cxJ2Mm/view?usp=sharing" class="social-link">
+              <ion-icon name="document-text"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Education</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Experience</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <!--
+          <p>
+            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
+            I enjoy
+            turning complex problems into simple, beautiful and intuitive designs.
+          </p>
+
+          <p>
+            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
+            Moreover, I
+            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
+            across your
+            message and identity in the most creative way. I created web design for many famous brand companies.
+          </p>
+          -->
+
+          <p>
+            Hello! I'm Priyal Padheriya, and I'm on an exciting journey to dive into the word of data analysis and product management; driven by my passion for data, technology, and innovation. As Data and product enthusiast, 
+            I bring a unique blend of technical expertise and a deep understanding of data-driven decision-making.
+          </p>
+
+          <p>
+            I'm currently working as a Data Analyst II at Discount Tire/America’s Tire, where I lead initiatives to streamline data extraction, manage storage, and design interactive dashboards that deliver meaningful insights for various teams and stakeholders. 
+            My experience extends to co-leading the merger and acquisition team, where I evaluate business opportunities and facilitate seamless integration processes.
+            I graduated with a Master of Science in Computer Science, specializing in data, from Arizona State University, with a strong foundation in technology. Along with this, 
+            I have also completed the AZNext Early Career Leadership Program (Mini MBA) offered by W.P. Carey School of Business, ASU.  I also hold a Bachelor of Technology in Information 
+            Technology with a minor in Finance from Nirma University in India. Coming from a world of technology and management, I believe I can help bridge the gap between the technical 
+            and the management world.
+          </p>
+
+          <p>
+            In my previous roles, I've worn many hats. I've explored the world of data as a Data and Product Analyst, honing my skills in turning data into actionable insights. I've delved 
+            into cutting-edge technology as a Data Science Researcher, always pushing the boundaries of what's possible. As a Software Developer, I have realized the importance of data protection in our digital age.
+            My journey has also led me to the role of an Associate Product Manager Intern, where I've discovered my talent for client negotiations, crafting creative solutions, and prioritizing user-centric 
+            features. As a Teaching Assistant, I'm passionate about education and strive to make complex concepts understandable for students, a skill that will undoubtedly come in handy as a future Product Manager.
+          </p>
+
+          <p>
+            Throughout my journey, I've embarked on exciting projects, from publishing a book chapter based on predicting depressive symptoms using Machine Learning to visualizing resilient deep learning models. I've 
+            also contributed to agriculture with the help of my project on Plant Disease Identification and Prediction model. 
+          </p>
+
+          <p>
+            I hold certifications in Communication Skills from Trinity College London, Advanced Google Analytics by Google Analytics, and am certified by Google in IT Support Professional certificate 
+            and Financial Markets by Yale University.
+          </p>
+
+          <p>
+            My mission as an aspiring Data Analyst and Product Manager? To transform data into insights and insights into innovative, user-focused products. If you're ready to join me on this data-driven journey, 
+            let's connect and explore new possibilities together.
+          </p>
+
+          <p>
+            You can have a look at my resume here: <a href="https://drive.google.com/file/d/1lT04362tk-C9w28FO41c5FEvF2cxJ2Mm/view?usp=sharing" class="resume-text">Priyal Padheriya Resume</a>
+          </p>
+
+
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <!--
+        
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+        -->
+
+
+        <!--
+          - testimonials
+        -->
+
+        <!--
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+        -->
+
+        
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+        
+
+
+        <!--
+          - clients
+        -->
+
+        <!--
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+        -->
+        
+
+      </article>
+
+
+
+
+      <!--
+        - #EDUCATION
+      -->
+
+      <article class="education" data-page="education">
+
+        <header>
+          <h2 class="h2 article-title">Education</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Master of Science in Computer Science (Specialization in Data)</h4>
+              <h5 class="h5 timeline-item-title"><i>Arizona State University - Tempe, USA</i></h5>
+
+              <span>January 2022 - December 2023</span>
+
+              <p class="timeline-text">
+                GPA: 4.0/4.0
+              </p>
+
+              <p></p>
+
+              <p class="timeline-text">
+                <u>Relevant Coursework</u>: Data Visualization; Data Processing at Scale; Data Mining; Data Science for System Decision Analytics;
+                Database Management System Implementation; Statistical Machine Learning, Knowledge Representation; Data-Intensive Systems for Machine Learning; Software Verification, Validation and Testing
+                
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">AZNext - Early Career Leadership Program (Mini MBA Certification)</h4>
+              <h5 class="h5 timeline-item-title"><i>W. P. Carey School of Business - Tempe, USA</i></h5>
+
+
+              <span>January 2023 — May 2023</span>
+
+              <p></p>
+
+              <p class="timeline-text">
+                <u>Relevant Coursework</u>: Strategic Decision Making; Product and Portfolio Management; Innovation and New Product Development; Strategic Sourcing;
+                Coordination and Risk Management; Marketing Management; The Art of Sales; Orders and Receivable Management; Analytics, Data and Emerging Tech; Sustainability
+              </p>
+              
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Bachelor of Technology in Information Technology with Minors in Finance</h4>
+              <h5 class="h5 timeline-item-title"><i>Nirma University - Gujarat, India</i></h5>
+
+
+              <span>August 2017 - June 2021</span>
+
+              <p class="timeline-text">
+                GPA: 8.2/10
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #Experience
+      -->
+
+      <article class="Experience" data-page="experience">
+
+        <header>
+          <h2 class="h2 article-title">Experience</h2>
+        </header>
+
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Professional Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+<li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Business Data Analyst II</h4>
+              <h5 class="h5 timeline-item-title"><i>Discount Tire/America’s Tire</i></h5>
+
+              <span>February 2024 - Present</span>
+
+              <p class="timeline-text">
+                • Utilizing Alteryx for ETL purposes, including data extraction, transformation, and integration from various sources - CSVs and
+VAST APIs, handling historical data spanning 5 years, and incorporating complex SQL queries for data manipulation and analysis.
+              </p>
+              <p class="timeline-text">
+                • Developing and maintaining automated data extraction pipelines using Alteryx Server, currently managing data from 45 stores,
+resulting in processing over 5 million records daily.
+              </p>
+              <p class="timeline-text">
+                • Managing data storage on Redshift, ensuring data organization into the required format for analysis, while implementing
+validation and error handling procedures using Python and AWS Glue, reducing manual testing efforts by 30%.
+              </p>
+               <p class="timeline-text">
+                • Co-leading the merger and acquisition team, evaluating the prioritization and profitability of acquiring businesses and facilitating
+the integration process by setting up acquired stores with the company's software and providing training to 500+ employees.
+              </p>
+               <p class="timeline-text">
+                •Designing and creating dashboards and reports using Tableau to provide meaningful insights into finance, operations, and sales,
+resulting in a 20% increase in evaluation accuracy for business leaders and achieving $65,000+ profit per store per day.
+              </p>
+              <p class="timeline-text">
+                •Crafting over 20 dashboards categorized into 4 main categories, enhancing data visualization and decision-making capabilities.
+              </p>
+
+            </li>
+            
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Data and Product Analyst Intern</h4>
+              <h5 class="h5 timeline-item-title"><i>Discount Tire/America's Tire</i></h5>
+
+              <span>June 2023 — December 2023</span>
+
+              <p class="timeline-text">
+                • Designed a strategic business requirement plan and roadmap to forecast M&A success and define scope, timelines, and criticality.
+              </p>
+              <p class="timeline-text">
+                • Performed statistical analysis on structured SQL data, leveraging ETL, Amazon Redshift and DBeaver, to enhance customer
+grouping accuracy by 18% and boost customer retention rate by 25% through strategic clustering and segmentation models.
+              </p>
+              <p class="timeline-text">
+                • Implemented tailored customer-centric & data-driven solutions through PowerBI, lowering the customer churn rate by 10%.
+              </p>
+
+            </li>
+
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Data Analyst & Researcher</h4>
+              <h5 class="h5 timeline-item-title"><i>The Luminosity Lab, Arizona State University</i></h5>
+
+              <span>June 2022 - August 2023</span>
+
+              <p class="timeline-text">
+                • Researched,designed,anddevelopedaninnovativecross-platformwebinterfaceforasimulator,utilizingReactandThree.js to
+elevate application responsiveness by 75% and user engagement by 28%.
+              </p>
+              <p class="timeline-text">
+                • Utilized R & SAS to forecast future data with 88% accuracy, leveraging 30 years of generational data for strategic insights.
+              </p>
+              <p class="timeline-text">
+                • Executed project shifting to Docker using Python & MongoDB, slashing app crash timing by 88% & generating $2.11M profit.
+              </p>
+              <p class="timeline-text">
+                • Extracted valuable product insights through customer feedback, resulting in a 20% improvement in informed business
+decisions, further influencing product development strategy & enabling prioritization of new feature additions & updates.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Business Data Analyst</h4>
+              <h5 class="h5 timeline-item-title"><i>PlayPower Labs</i></h5>
+
+              <span>June 2021 - October 2021</span>
+
+              <p class="timeline-text">
+                • Built a decision tree-based model to predict inventory demand & sales, reducing holding cost by 60% & generating $3.27M profit.
+              </p>
+              <p class="timeline-text">
+                • Leveraged Google Analytics to analyze multi-dimensional dataset & provided quantitative insights for understanding
+consumer behavior and product optimization by intra-organization collaboration.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Associate Product Manager Intern</h4>
+              <h5 class="h5 timeline-item-title"><i>Ajmera Infotech Pvt. Ltd.</i></h5>
+
+              <span>January 2021 - April 2021</span>
+
+              <p class="timeline-text">
+                • Led a 12-member cross-functional team for designing product vision & evaluating tradeoffs by conducting market research.
+              </p>
+              <p class="timeline-text">
+                • Fostered client negotiations & re-evaluated MVP, resulting in 13% scope crunch to mitigate potential loss of $2.3M.
+              </p>
+              <p class="timeline-text">
+                • Articulated technical & business acumen to boost product’s ability by crafting user stories & leveraging data visualization for
+commercialization strategies, resulting in 60K customer acquisition in first 4 months of product launch.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Teaching Assistant: IT682 Business Analysis and Optimization</h4>
+              <h5 class="h5 timeline-item-title"><i>Nirma University</i></h5>
+
+              <span>January 2019 — April 2020</span>
+
+              <p class="timeline-text">
+                • Conducted study sessions & one-on-one tutoring for 125 students, leading to a 20% average increase in students’ result.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Research Publications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Academic Projects</button>
+            </li>
+
+            <!--
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+            -->
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Research Publications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Academic Projects</button>
+              </li>
+
+              <!--
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+              -->
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="research publications">
+              <a href="https://iopscience.iop.org/book/edit/978-0-7503-5346-5">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/depression.jpg" alt="depression" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Prediction of Depressive Symptoms using Machine Learning</h3>
+
+                <p class="project-category">Research Publications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="academic projects">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/adversarial.jpg" alt="adversarial" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Visualization System for Interpretability of Adversarial-trained Models</h3>
+
+                <p class="project-category">Academic Projects</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="academic projects">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/plant.jpg" alt="plant" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Plant Disease Identification and Prediction</h3>
+
+                <p class="project-category">Academic Projects</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="academic projects">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/traffic.jpg" alt="traffic" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Analysis of Machine Learning Models for Road Traffic Accidents</h3>
+
+                <p class="project-category">Academic Projects</p>
+
+              </a>
+            </li>
+
+            <!--
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            -->
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="https://medium.com/@priyalpadheriya/elevator-pitches-your-60-second-formula-to-make-a-lasting-impression-9cac5eedd43c">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/elevator-pitch.jpg" alt="Elevator Pitches" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Interview Prep</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Aug 17, 2023</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Elevator Pitches</h3>
+
+                  <p class="blog-text">
+                    Your 60-Second Formula to make a Lasting Impression
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            
+
+            <li class="blog-post-item">
+              <a href="https://medium.com/@priyalpadheriya/ghc-2022-inspiring-connections-career-breakthroughs-priceless-memories-c013982aa205">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/ghc-2022.jpg" alt="GHC 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Women in Tech</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">June 30, 2023</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">GHC 2022</h3>
+
+                  <p class="blog-text">
+                    Inspiring Connections, Career Breakthroughs & Priceless Memories
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            
+
+            <!--
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            -->
+
+            <!--
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            -->
+
+            <!--
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            -->
+
+            <!--
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            -->
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <!--
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+      -->
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Lets get in touch</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
