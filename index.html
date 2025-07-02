@@ -950,29 +950,50 @@
 
       -->
 
-        <section class="contact-form">
+      <section class="contact-form">
 
-          <h3 class="h3 form-title">Lets get in touch</h3>
+  <h3 class="h3 form-title">Let’s Connect</h3>
+  <p class="form-subtext">Have a project or collaboration in mind? Drop me a message and I’ll get back to you shortly.</p>
 
-          <form action="#" class="form" data-form>
+  <form action="https://formspree.io/f/xovwywgk" method="POST" class="form">
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+    <div class="input-wrapper">
+      <input 
+        type="text" 
+        name="name" 
+        class="form-input" 
+        placeholder="Full Name" 
+        required 
+        aria-label="Full Name"
+      >
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
+      <input 
+        type="email" 
+        name="_replyto" 
+        class="form-input" 
+        placeholder="Email Address" 
+        required 
+        aria-label="Email Address"
+      >
+    </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+    <textarea 
+      name="message" 
+      class="form-input" 
+      placeholder="Your Message" 
+      rows="5" 
+      required 
+      aria-label="Message"
+    ></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+    <button class="form-btn" type="submit">
+      <ion-icon name="paper-plane"></ion-icon>
+      <span>Send Message</span>
+    </button>
 
-          </form>
+  </form>
 
-
-        </section>
+</section>
 
       </article>
 
