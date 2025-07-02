@@ -626,8 +626,10 @@
 
     <ul class="project-list">
 
+      <ul class="project-list">
+
       <li class="project-item active" data-filter-item data-category="academic projects">
-        <div class="project-item-content">
+        <a href="#" class="project-modal-trigger" data-project="teradyne">
           <figure class="project-img">
             <div class="project-item-icon-box">
               <ion-icon name="document-text-outline"></ion-icon>
@@ -636,23 +638,7 @@
           </figure>
           <h3 class="project-title">Strategic Inventory Optimization – ASIC Forecasting at Teradyne</h3>
           <p class="project-category">Academic Projects</p>
-          <div class="project-description">
-            <strong>Objective:</strong><br>
-            Developed a dynamic safety stock optimization model for ASIC inventory at Teradyne, addressing volatility in demand patterns and inconsistent lead times.<br><br>
-
-            <strong>Approach:</strong><br>
-            Analyzed historical MRP and E&O data using linear regression to uncover demand trends and compute part-specific risk coefficients.<br><br>
-
-            <strong>Solution:</strong><br>
-            Implemented a trend-based forecasting model with customized safety stock thresholds — capping inventory at 80% of the long-term forecast to reduce both overstock and shortages.<br><br>
-
-            <strong>Results:</strong><br>
-            Reduced safety stock value by 60% unlocking $36 million in savings while maintaining high availability and supply chain resilience.<br><br>
-
-            <strong>Impact:</strong><br>
-            Replaced Teradyne’s traditional “2-year buffer” with a scalable, data-driven strategy — setting a new standard for precision inventory planning.
-          </div>
-        </div>
+        </a>
       </li>
 
       <li class="project-item active" data-filter-item data-category="academic projects">
@@ -697,6 +683,31 @@
     </ul>
 
   </section>
+
+    <!-- Modal for Teradyne Project -->
+  <div class="modal-container" id="project-teradyne-modal">
+    <div class="overlay" data-overlay></div>
+    <section class="testimonials-modal">
+      <button class="modal-close-btn" data-modal-close-btn>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+      <div class="modal-content">
+        <h4 class="h3 modal-title">Strategic Inventory Optimization – ASIC Forecasting at Teradyne</h4>
+        <div data-modal-text>
+          <p><strong>Objective:</strong><br>
+         • Developed a dynamic safety stock optimization model for ASIC inventory at Teradyne, addressing volatility in demand patterns and inconsistent lead times.</p>
+          <p><strong>Approach:</strong><br>
+         • Analyzed historical MRP and E&O data using linear regression to uncover demand trends and compute part-specific risk coefficients.</p>
+          <p><strong>Solution:</strong><br>
+         • Implemented a trend-based forecasting model with customized safety stock thresholds — capping inventory at 80% of the long-term forecast to reduce both overstock and shortages.</p>
+          <p><strong>Results:</strong><br>
+         • Reduced safety stock value by 60% unlocking $36 million in savings while maintaining high availability and supply chain resilience.</p>
+          <p><strong>Impact:</strong><br>
+         • Replaced Teradyne’s traditional “2-year buffer” with a scalable, data-driven strategy — setting a new standard for precision inventory planning.</p>
+        </div>
+      </div>
+    </section>
+  </div>
 </article>
 
 
