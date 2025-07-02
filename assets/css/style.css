@@ -1573,6 +1573,19 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .form-btn ion-icon { font-size: 18px; }
 
+.highlight-message {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-400);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.white-text {
+  color: var(--white-2);
+}
+
+.gold-text {
+  color: var(--orange-yellow-crayola);
 }
 
 
