@@ -353,6 +353,8 @@ main {
   font-weight: var(--fw-500);
   letter-spacing: -0.25px;
   margin-bottom: 10px;
+	line-height: 1.1;
+
 }
 
 .info-content .title {
@@ -1735,7 +1737,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar, article {
-    width: 950px;
+    width: 1000px;
     box-shadow: var(--shadow-5);
   }
 
@@ -1873,8 +1875,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .main-content {
-    min-width: 75%;
-    width: 75%;
+    min-width: 65%;
+    width: 65%;
     margin: 0;
   }
 
@@ -1896,7 +1898,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 150px; }
+  .avatar-box img { width: 180px; }
 
   .info-content .name {
     white-space: nowrap;
