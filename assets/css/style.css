@@ -327,12 +327,12 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 140px;
   overflow: hidden;
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 405px; }
+.sidebar.active { max-height: 520px; }
 
 .sidebar-info {
   position: relative;
@@ -1320,14 +1320,13 @@ textarea.form-input::-webkit-resizer { display: none; }
      * typography
      */
 
-    --fs-1: 32px;
-    --fs-2: 24px;
-    --fs-3: 26px;
+    --fs-1: 36px;
+    --fs-2: 26px;
+    --fs-3: 30px;
     --fs-4: 18px;
-    --fs-6: 15px;
+    --fs-6: 16px;
     --fs-7: 15px;
     --fs-8: 12px;
-
   }
 
 
@@ -1337,9 +1336,9 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar, article {
-    width: 520px;
+    width: 600px;
     margin-inline: auto;
-    padding: 30px;
+    padding: 36px;
   }
 
   .article-title {
@@ -1387,7 +1386,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box { border-radius: 30px; }
 
-  .avatar-box img { width: 120px; }
+  .avatar-box img { width: 140px; }
 
   .info-content .name { margin-bottom: 15px; }
 
@@ -1411,8 +1410,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   .contacts-list { gap: 20px; }
 
   .contact-info {
-    max-width: calc(100% - 64px);
-    width: calc(100% - 64px);
+    max-width: calc(100% - 72px);
+    width: calc(100% - 72px);
   }
 
 
@@ -1617,7 +1616,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * REUSED STYLE
    */
 
-  .sidebar, article { width: 700px; }
+  .sidebar, article { width: 780px; }
 
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
@@ -1943,44 +1942,3 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
-	/* === Bigger sidebar card and content === */
-
-/* Base */
-.sidebar { padding: 24px; border-radius: 24px; }
-.info-content .name { font-size: clamp(22px, 3.2vw, 34px); line-height: 1.1; }
-.contact-title { font-size: 12px; }
-.contact-info :is(.contact-link, time, address) { font-size: 15px; }
-.icon-box { width: 36px; height: 36px; font-size: 18px; }
-
-/* Make the collapsed and expanded heights roomier on small screens */
-.sidebar { max-height: 140px; }
-.sidebar.active { max-height: 520px; }
-
-/* 580px and up */
-@media (min-width: 580px) {
-  .sidebar, article { width: 600px; padding: 36px; }
-  .avatar-box img { width: 140px; }
-  .contact-info { max-width: calc(100% - 72px); width: calc(100% - 72px); }
-}
-
-/* 768px and up */
-@media (min-width: 768px) {
-  .sidebar, article { width: 780px; }
-  .contacts-list { gap: 28px 18px; }
-  .icon-box { width: 40px; height: 40px; font-size: 20px; }
-}
-
-/* 1024px and up */
-@media (min-width: 1024px) {
-  .sidebar, article { width: 1000px; }
-}
-
-/* 1250px and up, give the sidebar more column width */
-@media (min-width: 1250px) {
-  .main-content { min-width: 68%; width: 68%; }
-  .sidebar { padding-top: 72px; }
-  .avatar-box img { width: 180px; }
-  .info-content .name { font-size: 36px; }
-  .contact-info :is(.contact-link, time, address) { font-size: 16px; }
-  .social-list { gap: 18px; }
-}
