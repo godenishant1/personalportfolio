@@ -596,18 +596,13 @@
 
 
 
-      <!--
-        - #PORTFOLIO
-      -->
-
-  <article class="portfolio" data-page="projects">
-
+      <!-- PORTFOLIO -->
+<article class="portfolio" data-page="projects">
   <header>
     <h2 class="h2 article-title">Projects</h2>
   </header>
 
   <section class="projects">
-
     <ul class="filter-list">
       <li class="filter-item">
         <button class="active" data-filter-btn>Academic Projects</button>
@@ -616,7 +611,7 @@
 
     <div class="filter-select-box">
       <button class="filter-select" data-select>
-        <div class="select-value" data-selecct-value>Select category</div>
+        <div class="select-value" data-select-value>Select category</div>
         <div class="select-icon">
           <ion-icon name="chevron-down"></ion-icon>
         </div>
@@ -629,22 +624,20 @@
       </ul>
     </div>
 
-    <ul class="project-list">
-
-      <ul class="project-list">
-
-      <li class="project-item active" data-filter-item data-category="academic projects">
-        <a href="#" class="project-modal-trigger" data-project="teradyne">
-          <figure class="project-img">
-            <div class="project-item-icon-box">
-              <ion-icon name="document-text-outline"></ion-icon>
-            </div>
-            <img src="./assets/images/teradyne.jpg" alt="teradyne" loading="lazy">
-          </figure>
-          <h3 class="project-title">Strategic Inventory Optimization – ASIC Forecasting at Teradyne</h3>
-          <p class="project-category">Academic Projects</p>
-        </a>
-      </li>
+ <li class="project-item active" data-filter-item data-category="academic projects">
+  <a href="#" class="project-modal-trigger"
+     data-target="#project-teradyne-modal"
+     data-img="./assets/images/teradyne.jpg">
+    <figure class="project-img">
+      <div class="project-item-icon-box">
+        <ion-icon name="document-text-outline"></ion-icon>
+      </div>
+      <img src="./assets/images/teradyne.jpg" alt="teradyne" loading="lazy">
+    </figure>
+    <h3 class="project-title">Strategic Inventory Optimization – ASIC Forecasting at Teradyne</h3>
+    <p class="project-category">Academic Projects</p>
+  </a>
+</li>
 
       <li class="project-item active" data-filter-item data-category="academic projects">
         <a href="https://b3a9c369-6c22-4add-848d-7b2bf2046c8c.filesusr.com/ugd/eb2754_a1dab358fcca44f48b9f549847e0c917.pdf" target="_blank">
@@ -689,31 +682,32 @@
 
   </section>
 
-    <!-- Modal for Teradyne Project -->
-  <div class="modal-container" id="project-teradyne-modal">
-    <div class="overlay" data-overlay></div>
-    <section class="testimonials-modal">
-      <button class="modal-close-btn" data-modal-close-btn>
-        <ion-icon name="close-outline"></ion-icon>
-      </button>
-      <div class="modal-content">
-        <h4 class="h3 modal-title">Strategic Inventory Optimization – ASIC Forecasting at Teradyne</h4>
-        <div data-modal-text>
-          <p><strong>Objective:</strong><br>
-         • Developed a dynamic safety stock optimization model for ASIC inventory at Teradyne, addressing volatility in demand patterns and inconsistent lead times.</p>
-          <p><strong>Approach:</strong><br>
-         • Analyzed historical MRP and E&O data using linear regression to uncover demand trends and compute part-specific risk coefficients.</p>
-          <p><strong>Solution:</strong><br>
-         • Implemented a trend-based forecasting model with customized safety stock thresholds — capping inventory at 80% of the long-term forecast to reduce both overstock and shortages.</p>
-          <p><strong>Results:</strong><br>
-         • Reduced safety stock value by 60% unlocking $36 million in savings while maintaining high availability and supply chain resilience.</p>
-          <p><strong>Impact:</strong><br>
-         • Replaced Teradyne’s traditional “2-year buffer” with a scalable, data-driven strategy — setting a new standard for precision inventory planning.</p>
-        </div>
+   <!-- Teradyne modal -->
+<div class="modal-container" id="project-teradyne-modal">
+  <div class="overlay" data-overlay></div>
+
+  <section class="testimonials-modal">
+    <button class="modal-close-btn" data-modal-close-btn>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <!-- big image on top -->
+    <div class="modal-img-wrapper">
+      <img id="project-teradyne-img" src="./assets/images/teradyne.jpg" alt="Teradyne project">
+    </div>
+
+    <div class="modal-content">
+      <h4 class="h3 modal-title">Strategic Inventory Optimization, ASIC Forecasting at Teradyne</h4>
+      <div data-modal-text>
+        <p><strong>Objective:</strong> Developed a dynamic safety stock model for ASIC inventory at Teradyne, solving demand volatility and lead time variability.</p>
+        <p><strong>Approach:</strong> Analyzed MRP and E&O data with regression to derive trends and risk coefficients.</p>
+        <p><strong>Solution:</strong> Trend based forecast with custom safety stock thresholds, capped at 80 percent of long term forecast.</p>
+        <p><strong>Results:</strong> Reduced safety stock value by 60 percent, created savings of 36 million dollars, maintained availability.</p>
+        <p><strong>Impact:</strong> Replaced a two year buffer with a data driven plan, improved precision in inventory planning.</p>
       </div>
-    </section>
-  </div>
-</article>
+    </div>
+  </section>
+</div>
 
 
 
