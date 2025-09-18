@@ -2027,4 +2027,15 @@ textarea.form-input::-webkit-resizer { display: none; }
   overflow: hidden;
   text-overflow: ellipsis;
 }
+/* Project modal image sizing */
+#project-teradyne-modal .modal-img-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
 
+/* Ensure modal is wide enough on large screens */
+@media (min-width: 768px) {
+  #project-teradyne-modal .testimonials-modal { max-width: 900px; }
+}
