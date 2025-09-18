@@ -327,12 +327,15 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 140px;
+  max-height: 220px;  /* room for avatar and name */
   overflow: hidden;
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 520px; }
+.sidebar.active   
+{max-height: 650px;     /* plenty of space for full contact list */
+  overflow: visible;     /* stop clipping when expanded */
+}
 
 .sidebar-info {
   position: relative;
@@ -1312,16 +1315,18 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 @media (min-width: 580px) {
 
-  /**
-   * CUSTOM PROPERTY
-   */
+  /* SIDEBAR */
+  .sidebar {
+    max-height: 260px;   /* bigger avatar at this breakpoint */
+  }
+  .sidebar.active {
+    max-height: 700px;
+    overflow: visible;
+  }
+  .avatar-box img { width: 140px; }
 
+  /* CUSTOM PROPERTY: TYPOGRAPHY */
   :root {
-
-    /**
-     * typography
-     */
-
     --fs-1: 36px;
     --fs-2: 26px;
     --fs-3: 30px;
@@ -1330,7 +1335,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     --fs-7: 15px;
     --fs-8: 12px;
   }
-
+}
 
 
   /**
@@ -1829,26 +1834,28 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 @media (min-width: 1250px) {
 
-  /**
-   * RESET
-   */
-
+  /* RESET */
   body::-webkit-scrollbar { width: 20px; }
-
   body::-webkit-scrollbar-track { background: var(--smoky-black); }
-
   body::-webkit-scrollbar-thumb {
     border: 5px solid var(--smoky-black);
     background: hsla(0, 0%, 100%, 0.1);
     border-radius: 20px;
-    box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
-                inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+    box-shadow:
+      inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+      inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
   }
-
-  body::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, 0.15); }
-
+  body::-webkit-scrollbar-thumb:hover {
+    background: hsla(0, 0%, 100%, 0.15);
+  }
   body::-webkit-scrollbar-button { height: 60px; }
 
+  /* SIDEBAR */
+  .sidebar {
+    max-height: none;    /* let content define height */
+    overflow: visible;
+  }
+}
 
 
   /**
