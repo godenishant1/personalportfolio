@@ -960,8 +960,8 @@ main {
 /* ✅ FIXED GRID AND LAYOUT BELOW */
 .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
   margin-bottom: 10px;
 }
 
@@ -997,7 +997,8 @@ main {
 .project-img {
   position: relative;
   width: 100%;
-  height: 180px;
+  aspect-ratio: 16 / 10;
+  height: auto;
   overflow: hidden;
   border-radius: 12px;
   margin-bottom: 0;
@@ -1056,6 +1057,7 @@ main {
 }
 
 /* ✅ CONSISTENT TITLE + CATEGORY STYLE */
+/* Title and category, aligned and clamped */
 .project-title,
 .project-category {
   margin-left: 12px;
@@ -1069,6 +1071,13 @@ main {
   text-transform: capitalize;
   line-height: 1.3;
   margin-top: 12px;
+
+  /* prevent super tall uneven titles */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;       /* allow max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: calc(1.3em * 2); /* reserve space for 2 lines */
 }
 
 .project-category {
@@ -1076,8 +1085,15 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   margin-bottom: 12px;
+
+  /* keep category on one line */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* breathing room at bottom of each card */
+.project-item { padding-bottom: 12px; }
 
 
 
@@ -1692,7 +1708,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* portfolio and blog grid */
 
-  .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
+  .project-list, .blog-posts-list { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
 
 
 
@@ -1812,7 +1828,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * PORTFOLIO
    */
 
-  .project-list { grid-template-columns: repeat(3, 1fr); }
+  .project-list { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
 
 
 
