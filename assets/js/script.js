@@ -157,31 +157,3 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 
-<script>
-  // open modal on project click
-  document.querySelectorAll('.project-modal-trigger').forEach(function(el){
-    el.addEventListener('click', function(e){
-      e.preventDefault();
-      var targetSel = el.getAttribute('data-target');
-      var modal = document.querySelector(targetSel);
-      if (!modal) return;
-
-      // set image if provided
-      var imgSrc = el.getAttribute('data-img') || (el.querySelector('img') && el.querySelector('img').src);
-      var modalImg = modal.querySelector('.modal-img-wrapper img');
-      if (modalImg && imgSrc) modalImg.src = imgSrc;
-
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  // close handlers
-  document.querySelectorAll('[data-modal-close-btn], .modal-container .overlay').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var modal = btn.closest('.modal-container');
-      if (modal) modal.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-  });
-</script>
