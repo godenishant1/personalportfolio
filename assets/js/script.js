@@ -12,7 +12,9 @@ const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+if (sidebarBtn && sidebar) {
+  sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+}
 
 
 
@@ -21,7 +23,11 @@ const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
-
+if (modalTitle && modalText) {
+  modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+  modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+  testimonialsModalFunc();
+}
 // modal variable
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
@@ -41,36 +47,42 @@ for (let i = 0; i < testimonialsItem.length; i++) {
   });
 
 // close modal
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
 
 
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+if (modalCloseBtn && overlay && modalContainer) {
+  modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+  overlay.addEventListener("click", testimonialsModalFunc);
+}
 
 
 
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
+const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
+if (select) {
+  select.addEventListener("click", function () {
+    elementToggleFunc(this);
+  });
+}
 
-select.addEventListener("click", function () { elementToggleFunc(this); });
+
+
 
 // add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
-  });
+if (select && selectItems.length && selectValue) {
+  for (let i = 0; i < selectItems.length; i++) {
+    selectItems[i].addEventListener("click", function () {
+      let selectedValue = this.innerText.toLowerCase();
+      selectValue.innerText = this.innerText;
+      elementToggleFunc(select);
+      filterFunc(selectedValue);
+    });
+  }
 }
 
 // filter variables
@@ -155,5 +167,31 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+// theme toggle
+const themeToggleBtn = document.getElementById("themeToggle");
+const themeStorageKey = "theme";
 
+function applyTheme(theme) {
+  if (!themeToggleBtn) return;
+
+  if (theme === "light") {
+    document.body.setAttribute("data-theme", "light");
+    themeToggleBtn.textContent = "☀️";
+    localStorage.setItem(themeStorageKey, "light");
+  } else {
+    document.body.removeAttribute("data-theme");
+    themeToggleBtn.textContent = "🌙";
+    localStorage.setItem(themeStorageKey, "dark");
+  }
+}
+
+const savedTheme = localStorage.getItem(themeStorageKey);
+applyTheme(savedTheme === "light" ? "light" : "dark");
+
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener("click", function () {
+    const isLight = document.body.getAttribute("data-theme") === "light";
+    applyTheme(isLight ? "dark" : "light");
+  });
+}
 
