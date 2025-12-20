@@ -194,4 +194,34 @@ if (themeToggleBtn) {
     applyTheme(isLight ? "dark" : "light");
   });
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const themeToggleBtn = document.getElementById("themeToggle");
+  const themeStorageKey = "theme";
 
+  if (!themeToggleBtn) {
+    console.log("themeToggle button not found");
+    return;
+  }
+
+  function applyTheme(theme) {
+    if (theme === "light") {
+      document.body.setAttribute("data-theme", "light");
+      themeToggleBtn.textContent = "☀️";
+      localStorage.setItem(themeStorageKey, "light");
+    } else {
+      document.body.removeAttribute("data-theme");
+      themeToggleBtn.textContent = "🌙";
+      localStorage.setItem(themeStorageKey, "dark");
+    }
+  }
+
+  const savedTheme = localStorage.getItem(themeStorageKey);
+  applyTheme(savedTheme === "light" ? "light" : "dark");
+
+  themeToggleBtn.addEventListener("click", function () {
+    const isLight = document.body.getAttribute("data-theme") === "light";
+    applyTheme(isLight ? "dark" : "light");
+  });
+
+  console.log("theme toggle ready");
+});
