@@ -13,7 +13,9 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
 if (sidebarBtn && sidebar) {
-  sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+  sidebarBtn.addEventListener("click", function () {
+    elementToggleFunc(sidebar);
+  });
 }
 
 
