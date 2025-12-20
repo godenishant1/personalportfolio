@@ -2060,3 +2060,22 @@ textarea.form-input::-webkit-resizer { display: none; }
 .form-input::placeholder {
   color: #777777;
 }
+#themeToggle {
+  margin-left: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #e6e6e3;
+  background: rgba(255, 255, 255, 0.85);
+  color: #111111;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+#themeToggle:hover {
+  background: #f2f2ef;
+}
+
+#themeToggle:active {
+  transform: scale(0.9);
+}
