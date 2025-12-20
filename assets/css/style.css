@@ -2114,3 +2114,31 @@ body[data-theme="light"] {
     rgba(0, 0, 0, 0.00) 60%
   );
 }
+/* Prevent navbar overlap with page titles */
+.main-content {
+  padding-top: 16px;
+}
+
+article.active {
+  padding-top: 18px;
+}
+.navbar-list {
+  gap: 16px;
+}
+
+#themeToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 10px;
+  border: 1px solid #e6e6e3;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+#themeToggle:hover {
+  background: #f2f2ef;
+}
