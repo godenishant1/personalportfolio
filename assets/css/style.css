@@ -156,7 +156,7 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: #ffffff; }
+body { background: #f5f5f3; }
 
 
 
@@ -168,8 +168,8 @@ body { background: #ffffff; }
 
 .sidebar,
 article {
-  background: #ffffff;
-  border: 1px solid var(--jet);
+  background: #fafafa;
+  border: 1px solid #e6e6e3;
   border-radius: 20px;
   padding: 15px;
   box-shadow: var(--shadow-1);
@@ -514,7 +514,7 @@ main {
 .about .article-title { margin-bottom: 15px; }
 
 .about-text {
-  color: #333333;
+  color: #3f3f3f;
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
@@ -565,7 +565,7 @@ main {
 .service-item-title { margin-bottom: 7px; }
 
 .service-item-text {
-  color: #333333;
+  color: #3f3f3f;
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
@@ -612,7 +612,7 @@ main {
 .testimonials-item-title { margin-bottom: 7px; }
 
 .testimonials-text {
-  color: #333333;
+  color: #3f3f3f;
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
@@ -840,7 +840,7 @@ main {
 }
 
 .timeline-text {
-  color: #333333;
+  color: #3f3f3f;
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
@@ -1177,7 +1177,7 @@ main {
 .blog-post-item > a:hover .blog-item-title { color: var(--orange-yellow-crayola); }
 
 .blog-text {
-  color: #333333;
+  color: #3f3f3f;
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
