@@ -203,3 +203,11 @@ if (savedTheme === "light" || savedTheme === "dark") {
     applyTheme(isLight ? "dark" : "light");
   });
 }
+
+themeToggleBtn.addEventListener("click", function () {
+  console.log("toggle clicked");
+  console.log("before:", document.body.getAttribute("data-theme"));
+  const isLight = document.body.getAttribute("data-theme") === "light";
+  applyTheme(isLight ? "dark" : "light");
+  console.log("after:", document.body.getAttribute("data-theme"));
+});
