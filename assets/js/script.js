@@ -3,8 +3,10 @@
 
 
 // element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
+const elementToggleFunc = function (elem) {
+  if (!elem) return;
+  elem.classList.toggle("active");
+}
 
 
 // sidebar variables
@@ -25,28 +27,29 @@ const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
-if (modalTitle && modalText) {
-  modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-  modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-  testimonialsModalFunc();
-}
+
 // modal variable
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
 const testimonialsModalFunc = function () {
+  if (!modalContainer || !overlay) return;
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
-
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
-  testimonialsItem[i].addEventListener("click", function () {
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-    testimonialsModalFunc();
-  });
+testimonialsItem[i].addEventListener("click", function () {
+  const t = this.querySelector("[data-testimonials-title]");
+  const tx = this.querySelector("[data-testimonials-text]");
+
+  if (!t || !tx || !modalTitle || !modalText) return;
+
+  modalTitle.innerHTML = t.innerHTML;
+  modalText.innerHTML = tx.innerHTML;
+  testimonialsModalFunc();
+});
 
 // close modal
 
@@ -107,22 +110,22 @@ const filterFunc = function (selectedValue) {
 }
 
 // add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
+if (filterBtn.length && selectValue) {
+  let lastClickedBtn = filterBtn[0];
 
-for (let i = 0; i < filterBtn.length; i++) {
+  for (let i = 0; i < filterBtn.length; i++) {
+    filterBtn[i].addEventListener("click", function () {
 
-  filterBtn[i].addEventListener("click", function () {
+      let selectedValue = this.innerText.toLowerCase();
+      selectValue.innerText = this.innerText;
+      filterFunc(selectedValue);
 
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
+      if (lastClickedBtn) lastClickedBtn.classList.remove("active");
+      this.classList.add("active");
+      lastClickedBtn = this;
 
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
-  });
-
+    });
+  }
 }
 
 
@@ -133,17 +136,16 @@ const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
 // add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
-  });
+if (form && formBtn && formInputs.length) {
+  for (let i = 0; i < formInputs.length; i++) {
+    formInputs[i].addEventListener("input", function () {
+      if (form.checkValidity()) {
+        formBtn.removeAttribute("disabled");
+      } else {
+        formBtn.setAttribute("disabled", "");
+      }
+    });
+  }
 }
 
 
@@ -156,54 +158,25 @@ const pages = document.querySelectorAll("[data-page]");
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
+    for (let j = 0; j < pages.length; j++) {
+      if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
+        pages[j].classList.add("active");
+        navigationLinks[j].classList.add("active");
         window.scrollTo(0, 0);
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        pages[j].classList.remove("active");
+        navigationLinks[j].classList.remove("active");
       }
     }
 
   });
 }
+
 // theme toggle
 const themeToggleBtn = document.getElementById("themeToggle");
 const themeStorageKey = "theme";
 
-function applyTheme(theme) {
-  if (!themeToggleBtn) return;
-
-  if (theme === "light") {
-    document.body.setAttribute("data-theme", "light");
-    themeToggleBtn.textContent = "☀️";
-    localStorage.setItem(themeStorageKey, "light");
-  } else {
-    document.body.removeAttribute("data-theme");
-    themeToggleBtn.textContent = "🌙";
-    localStorage.setItem(themeStorageKey, "dark");
-  }
-}
-
-const savedTheme = localStorage.getItem(themeStorageKey);
-applyTheme(savedTheme === "light" ? "light" : "dark");
-
 if (themeToggleBtn) {
-  themeToggleBtn.addEventListener("click", function () {
-    const isLight = document.body.getAttribute("data-theme") === "light";
-    applyTheme(isLight ? "dark" : "light");
-  });
-}
-document.addEventListener("DOMContentLoaded", function () {
-  const themeToggleBtn = document.getElementById("themeToggle");
-  const themeStorageKey = "theme";
-
-  if (!themeToggleBtn) {
-    console.log("themeToggle button not found");
-    return;
-  }
 
   function applyTheme(theme) {
     if (theme === "light") {
@@ -217,13 +190,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  const savedTheme = localStorage.getItem(themeStorageKey);
-  applyTheme(savedTheme === "light" ? "light" : "dark");
+const savedTheme = localStorage.getItem(themeStorageKey);
+if (savedTheme === "light" || savedTheme === "dark") {
+  applyTheme(savedTheme);
+} else {
+  const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+  applyTheme(prefersLight ? "light" : "dark");
+}
 
   themeToggleBtn.addEventListener("click", function () {
     const isLight = document.body.getAttribute("data-theme") === "light";
     applyTheme(isLight ? "dark" : "light");
   });
-
-  console.log("theme toggle ready");
-});
+}
