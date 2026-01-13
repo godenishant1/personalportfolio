@@ -48,6 +48,20 @@
     hsl(45, 100%, 72%), 
     hsl(35, 100%, 68%)
   );
+  --page-bg: #111111;
+  --panel-bg: #161618;
+  --panel-border: rgba(255,255,255,0.10);
+  --text-main: rgba(255,255,255,0.92);
+  --text-muted: rgba(255,255,255,0.72);
+}
+
+body[data-theme="light"] {
+  --page-bg: #f5f5f3;
+  --panel-bg: #fafafa;
+  --panel-border: #e6e6e3;
+  --text-main: #111111;
+  --text-muted: #3f3f3f;
+}
 
   /* solid */
 
@@ -151,7 +165,10 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: #f5f5f3; }
+body {
+  background: var(--page-bg);
+  color: var(--text-main);
+}
 
 
 
@@ -163,8 +180,8 @@ body { background: #f5f5f3; }
 
 .sidebar,
 article {
-  background: #fafafa;
-  border: 1px solid #e6e6e3;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
   border-radius: 20px;
   padding: 15px;
   box-shadow: var(--shadow-1);
@@ -2143,5 +2160,3 @@ article.active {
   background: #f2f2ef;
 }
 
-body { background: #111111; }
-body[data-theme="light"] { background: #f5f5f3; }
