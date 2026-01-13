@@ -177,7 +177,6 @@ const themeToggleBtn = document.getElementById("themeToggle");
 const themeStorageKey = "theme";
 
 if (themeToggleBtn) {
-
   function applyTheme(theme) {
     if (theme === "light") {
       document.body.setAttribute("data-theme", "light");
@@ -190,24 +189,22 @@ if (themeToggleBtn) {
     }
   }
 
-const savedTheme = localStorage.getItem(themeStorageKey);
-if (savedTheme === "light" || savedTheme === "dark") {
-  applyTheme(savedTheme);
-} else {
-  const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
-  applyTheme(prefersLight ? "light" : "dark");
-}
+  const savedTheme = localStorage.getItem(themeStorageKey);
+  if (savedTheme === "light" || savedTheme === "dark") {
+    applyTheme(savedTheme);
+  } else {
+    const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+    applyTheme(prefersLight ? "light" : "dark");
+  }
 
   themeToggleBtn.addEventListener("click", function () {
+    console.log("toggle clicked");
+    console.log("before:", document.body.getAttribute("data-theme"));
+
     const isLight = document.body.getAttribute("data-theme") === "light";
     applyTheme(isLight ? "dark" : "light");
+
+    console.log("after:", document.body.getAttribute("data-theme"));
   });
 }
 
-themeToggleBtn.addEventListener("click", function () {
-  console.log("toggle clicked");
-  console.log("before:", document.body.getAttribute("data-theme"));
-  const isLight = document.body.getAttribute("data-theme") === "light";
-  applyTheme(isLight ? "dark" : "light");
-  console.log("after:", document.body.getAttribute("data-theme"));
-});
