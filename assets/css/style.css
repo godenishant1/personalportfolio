@@ -61,7 +61,14 @@ body[data-theme="light"] {
   --panel-border: #e6e6e3;
   --text-main: #111111;
   --text-muted: #3f3f3f;
+	--text-muted-70: rgba(63,63,63,0.70);
 }
+--text-muted-70: rgba(255,255,255,0.70);
+	--white-1: var(--text-main);
+  --white-2: var(--text-main);
+
+  --light-gray: var(--text-muted);
+  --light-gray-70: var(--text-muted);
 
   /* solid */
 
@@ -70,12 +77,12 @@ body[data-theme="light"] {
   --eerie-black-1: hsl(0, 0%, 100%);
   --eerie-black-2: hsl(0, 0%, 100%);
   --smoky-black: hsl(0, 0%, 100%);
-  --white-1: hsl(0, 0%, 10%);
-  --white-2: hsl(0, 0%, 10%);
+  --white-1: var(--text-main);
+  --white-2: var(--text-main);
   --orange-yellow-crayola: hsl(43, 65%, 55%);
   --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 35%);
-  --light-gray-70: hsla(0, 0%, 35%, 0.7);
+--light-gray: var(--text-muted);
+--light-gray-70: var(--text-muted-70);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
   /**
@@ -526,7 +533,7 @@ main {
 .about .article-title { margin-bottom: 15px; }
 
 .about-text {
-  color: #3f3f3f;
+  color: var(--text-muted);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
@@ -577,7 +584,7 @@ main {
 .service-item-title { margin-bottom: 7px; }
 
 .service-item-text {
-  color: #3f3f3f;
+  color: var(--text-muted);
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
@@ -624,7 +631,7 @@ main {
 .testimonials-item-title { margin-bottom: 7px; }
 
 .testimonials-text {
-  color: #3f3f3f;
+  color: var(--text-muted);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
@@ -743,7 +750,7 @@ main {
 }
 
 .modal-content p {
-  color: #333333;
+  color: var(--text-muted);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
@@ -852,7 +859,7 @@ main {
 }
 
 .timeline-text {
-  color: #3f3f3f;
+  color: var(--text-muted);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
@@ -878,7 +885,7 @@ main {
 }
 
 .skill .title-wrapper data {
-  color: #333333;
+  color: var(--text-muted);
   font-size: var(--fs-7);
   font-weight: var(--fw-300);
 }
@@ -1189,7 +1196,7 @@ main {
 .blog-post-item > a:hover .blog-item-title { color: var(--orange-yellow-crayola); }
 
 .blog-text {
-  color: #3f3f3f;
+  color: var(--text-muted);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
@@ -2058,7 +2065,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 .select-list,
 .select-item button {
   background: #ffffff;
-  color: #3f3f3f;
+  color: var(--text-muted);
   border-color: #e6e6e3;
 }
 
